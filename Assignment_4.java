@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Assignment_4 {
@@ -70,18 +71,14 @@ public class Assignment_4 {
         return j+1;
     }
 
-    public static int[] sumTarget(int[] arr, int target) {
-        int s = 0;
-        int n = 1;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[s] + arr[n] == target) {
-                    return new int[] { i, j };
-                }
+    public static void sumTarget(int[] arr, int target) {
+        ArrayList<Integer> result=new ArrayList<Integer>();
+        for(int i=0;i<arr.length-1;i++){
+            for(int j=i+1;i<arr.length-1;j++){
+                if(arr[i]+arr[j]==target) result.add(arr[i],arr[j]);
             }
         }
-        return new int[] {};
-
+        System.out.println(result);
     }
 
     public static void reverseString() {
@@ -201,7 +198,7 @@ public class Assignment_4 {
 
         int arr[] = { 2, 7, 11, 12 };
         int target = 9;
-        System.out.println(sumTarget(arr, target));
+        sumTarget(arr, target);
 
         reverseString();
 

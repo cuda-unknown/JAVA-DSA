@@ -5,7 +5,7 @@ class Animal {
         System.out.println("All animals have legs");
     }
 }
-public class Dog extends Animal{
+public class Inheritance extends Animal{
     void legs(){
         System.out.println("All dogs have 4 legs");
     }
@@ -14,7 +14,7 @@ public class Dog extends Animal{
     }
     
     public static void main(String[] args) {
-        Dog d1=new Dog();
+        Inheritance d1=new Inheritance();
         d1.legs();
     }
 }
