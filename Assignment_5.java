@@ -1,10 +1,8 @@
 import java.util.ArrayList;
 
-import day8.twoDArray;
-
 public class Assignment_5 {
-    public static void arrayListUse(){
-        ArrayList<Integer> res=new ArrayList<Integer>();
+    public static void arrayListUse() {
+        ArrayList<Integer> res = new ArrayList<Integer>();
         res.add(1);
         res.add(2);
         res.add(3);
@@ -16,23 +14,23 @@ public class Assignment_5 {
         res.addFirst(22);
         res.addLast(20);
         System.out.print("Added 10 elements : ");
-        for(int i:res){
-            System.out.print(i+" ");
+        for (int i : res) {
+            System.out.print(i + " ");
         }
         System.out.println();
 
         System.out.print("After removing element 7 : ");
         res.remove(5);
-        for(int i:res){
-            System.out.print(i+" ");
+        for (int i : res) {
+            System.out.print(i + " ");
         }
         System.out.println();
 
         System.out.print("Updating an element 3 : ");
         res.remove(6);
-        res.add(6,90);
-        for(int i:res){
-            System.out.print(i+" ");
+        res.add(6, 90);
+        for (int i : res) {
+            System.out.print(i + " ");
         }
         System.out.println();
 
@@ -41,28 +39,30 @@ public class Assignment_5 {
         System.out.println();
     }
 
-    public static void studentManager(){
-        ArrayList<String> res=new ArrayList<String>();
+    public static void studentManager() {
+        ArrayList<String> res = new ArrayList<String>();
         System.out.print("Adding students name in list : ");
         res.add("Nirmal");
         res.add("Singh");
         res.add("Sohi");
-        for(String i:res){
-            System.out.print(i+" ");
+        for (String i : res) {
+            System.out.print(i + " ");
         }
         System.out.println();
 
         System.out.print("Removing Specific name 'Sohi' : ");
         res.remove("Sohi");
-        for(String i:res){
-            System.out.print(i+" ");
+        for (String i : res) {
+            System.out.print(i + " ");
         }
         System.out.println();
 
         System.out.print("Finding a student by name 'Singh': ");
-        for(String i:res){
-            if(!res.contains("Singh"))  System.out.print("No result");
-            else System.out.print("Found");
+        for (String i : res) {
+            if (!i.contains("Singh"))
+                System.out.print("No result");
+            else
+                System.out.print("Found");
         }
         System.out.println();
 
@@ -73,41 +73,44 @@ public class Assignment_5 {
         System.out.println();
     }
 
-    public static ArrayList<Integer> removeDuplicate(){
-        int arr[]={10,20,10,30,20,40};
-        ArrayList<Integer> res=new ArrayList<>();
-        for(int i=0;i<arr.length;i++){
-            if(!res.contains(arr[i])) res.add(arr[i]);
+    public static ArrayList<Integer> removeDuplicate() {
+        int arr[] = { 10, 20, 10, 30, 20, 40 };
+        ArrayList<Integer> res = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            if (!res.contains(arr[i]))
+                res.add(arr[i]);
         }
         return res;
     }
 
-    public static void maxMin(){
+    public static void maxMin() {
         System.out.println();
-        int arr[]={10,20,500,30,2,40};
-        ArrayList<Integer> res=new ArrayList<>();
-        int max=Integer.MIN_VALUE; 
-        int min=Integer.MAX_VALUE;
-        int sum=0;
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]>max) max=arr[i];
-            else if(arr[i]<min) min=arr[i];
-            sum+=arr[i];
+        int arr[] = { 10, 20, 500, 30, 2, 40 };
+        ArrayList<Integer> res = new ArrayList<>();
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max)
+                max = arr[i];
+            else if (arr[i] < min)
+                min = arr[i];
+            sum += arr[i];
         }
-        int avg=sum/6;
+        int avg = sum / 6;
         res.add(max);
         res.add(min);
         res.add(avg);
-        
+
         System.out.print("Printing Max MIn Average of Array : ");
-        for(int i:res){
-            System.out.print(i+" ");
+        for (int i : res) {
+            System.out.print(i + " ");
         }
         System.out.println();
     }
 
-    public static void stringBuilderOperations(){
-        StringBuilder sb=new StringBuilder();
+    public static void stringBuilderOperations() {
+        StringBuilder sb = new StringBuilder();
         System.out.println();
 
         System.out.print("Performing operations on String using StringBuilder : ");
@@ -119,173 +122,192 @@ public class Assignment_5 {
         System.out.println(sb);
 
         System.out.print("Turning String to UpperCase : ");
-        for(int i=0;i<sb.length();i++){
+        for (int i = 0; i < sb.length(); i++) {
             if (Character.isLowerCase(sb.charAt(i))) {
                 sb.setCharAt(i, Character.toUpperCase(sb.charAt(i)));
-            }    
+            }
         }
         System.out.println(sb);
 
         System.out.print("Inserting specific character : ");
-        sb.insert(3,'A');
+        sb.insert(3, 'A');
         System.out.println(sb);
 
         System.out.print("Deleting specific character in String : ");
-        sb.delete(2, 4); //last index is never included 
+        sb.delete(2, 4); // last index is never included
         System.out.println(sb);
     }
 
-    public static boolean checkPalindrome(){
-        String in="madam";
-        String name="hello";
+    public static void checkPalindrome() {
+        System.out.println();
+        String in = "madam";
+        String name = "hello";
 
-        StringBuilder sb=new StringBuilder();
-        sb.append(in);
-        
-        Strin
+        StringBuilder sb = new StringBuilder("madam");
+        StringBuilder sc = new StringBuilder("hello");
 
-        if(sb)
-        return true;
+        sb.reverse();
+        sc.reverse();
 
+        System.out.print("String madam is: ");
+        if (in.equals(sb.toString()))
+            System.out.println("Palindrome");
+        else
+            System.out.print("Not Palindrome");
 
+        System.out.print("String hello is : ");
+        if (name.equals(sc.toString()))
+            System.out.print("Palindrome");
+        else
+            System.out.print("Not Palindrome");
+
+        System.out.println();
     }
 
-    public static void TwoDArray(){
-        int arr[][]={
-            {1,2},
-            {3,4}
+    public static void TwoDArray() {
+        System.out.println();
+        int arr[][] = {
+                { 1, 2 },
+                { 3, 4 }
         };
 
-        int arr1[][]={
-            {5,6},
-            {7,8}
+        int arr1[][] = {
+                { 5, 6 },
+                { 7, 8 }
         };
 
-        int row=arr.length;
-        int col=arr[0].length;
+        int row = arr.length;
+        int col = arr[0].length;
 
-        int sum[][]=new int[row][col];
+        int sum[][] = new int[row][col];
 
-        for(int i=0;i<row;i++){
-            for(int j=0;j<col;j++){
-                sum[i][j] =arr[i][j] +arr1[i][j];
+        System.out.println("Sum of rows : ");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                sum[i][j] = arr[i][j] + arr1[i][j];
             }
         }
 
-        for(int i=0;i<row;i++){
-            for(int j=0;j<col;j++){
-                System.out.print(sum[i][j]+" ");
+        System.out.println("Sum of Columns : ");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                System.out.print(sum[i][j] + " ");
             }
             System.out.println();
         }
     }
 
-    public static void sumOfEach(){
-        int arr[][]={
-            {1,2,3},
-            {4,5,6},
-            {7,8,9}
+    public static void sumOfEach() {
+        int arr[][] = {
+                { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 }
         };
 
         System.out.print("Sum of rows : ");
-        for(int i=0;i<arr.length;i++){
-            int row_sum=0;
-            for(int j=0;j<arr[0].length;j++){
-                row_sum+=arr[i][j];
+        for (int i = 0; i < arr.length; i++) {
+            int row_sum = 0;
+            for (int j = 0; j < arr[0].length; j++) {
+                row_sum += arr[i][j];
             }
-            System.out.println( " "+row_sum);
+            System.out.println(" " + row_sum);
         }
 
         System.out.print("Sum of Colms :");
-        for(int j=0;j<arr[0].length;j++){
-            int col_sum=0;
-            for(int i=0;i<arr.length;i++){
-                col_sum+=arr[i][j];
+        for (int j = 0; j < arr[0].length; j++) {
+            int col_sum = 0;
+            for (int i = 0; i < arr.length; i++) {
+                col_sum += arr[i][j];
             }
-            System.out.println(" " +col_sum);
+            System.out.println(" " + col_sum);
         }
 
     }
 
-    public static void searchingElement(){
-        int arr[][]={
-            {1,2,3},
-            {4,5,6},
-            {7,8,9}
+    public static void searchingElement() {
+        System.out.println();
+        int arr[][] = {
+                { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 }
         };
 
-        int search=9;
-        boolean found=false;
+        int search = 9;
+        boolean found = false;
 
-        for(int i=0;i<arr.length;i++){
-            for(int j=0;j<arr[0].length;j++){
-                if(arr[i][j]==search){
-                    System.out.println("Found at row :"+i+" Found at col : "+j);
-                    found=true;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[0].length; j++) {
+                if (arr[i][j] == search) {
+                    System.out.println("Found at row :" + i + " Found at col : " + j);
+                    found = true;
                     break;
                 }
             }
-            if(found) break;
+            if (found)
+                break;
         }
-        if(!found) System.out.println("Element not found");
+        if (!found)
+            System.out.println("Element not found");
     }
 
-    public static void marksOfStudents(){
+    public static void marksOfStudents() {
         System.out.println();
-        int std1[][]={
-            {80},
-            {75},
-            {90}
+        int std1[][] = {
+                { 80 },
+                { 75 },
+                { 90 }
         };
 
-        int std2[][]={
-            {70},
-            {85},
-            {60}
+        int std2[][] = {
+                { 70 },
+                { 85 },
+                { 60 }
         };
 
-        int totalmarks=0;
-        for(int i=0;i<std1.length;i++){
-            for(int j=0;j<std1[0].length;j++){
-                totalmarks+=std1[i][j];
+        int totalmarks = 0;
+        for (int i = 0; i < std1.length; i++) {
+            for (int j = 0; j < std1[0].length; j++) {
+                totalmarks += std1[i][j];
             }
         }
-        System.out.println("Total marks of Student 1 is : " +totalmarks);
+        System.out.println("Total marks of Student 1 is : " + totalmarks);
 
-        int totalmarks_std2=0;
-        for(int i=0;i<std2.length;i++){
-            for(int j=0;j<std2[0].length;j++){
-                totalmarks_std2+=std2[i][j];
+        int totalmarks_std2 = 0;
+        for (int i = 0; i < std2.length; i++) {
+            for (int j = 0; j < std2[0].length; j++) {
+                totalmarks_std2 += std2[i][j];
             }
         }
-        System.out.println("Total marks of Student 2 is : " +totalmarks_std2);
+        System.out.println("Total marks of Student 2 is : " + totalmarks_std2);
 
-        int avg1=totalmarks/3;
-        int avg2=totalmarks_std2/3;
-        System.out.println( "Average for std1 is : "+avg1);
-        System.out.println("Average of Student 2 : "+avg2);
+        int avg1 = totalmarks / 3;
+        int avg2 = totalmarks_std2 / 3;
+        System.out.println("Average for std1 is : " + avg1);
+        System.out.println("Average of Student 2 : " + avg2);
 
-        if(totalmarks>totalmarks_std2) System.out.println( "Student 1 has highest marks ");
-        else System.out.println( "Student 2 has highest marks ");
+        if (totalmarks > totalmarks_std2)
+            System.out.println("Student 1 has highest marks ");
+        else
+            System.out.println("Student 2 has highest marks ");
     }
 
-    
     public static void main(String[] args) {
         arrayListUse();
 
         studentManager();
 
-
-        System.out.println("After removing Duplicates : "+removeDuplicate());
+        System.out.println("After removing Duplicates : " + removeDuplicate());
 
         maxMin();
 
         stringBuilderOperations();
 
+        checkPalindrome();
+
         TwoDArray();
 
         sumOfEach();
-        
+
         searchingElement();
 
         marksOfStudents();

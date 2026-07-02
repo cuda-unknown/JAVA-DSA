@@ -17,6 +17,8 @@ public class Array {
         System.out.println(a.get(2));
         
         a.remove(1);
+
+        a.add(0,99);
         
         System.out.println(a);
 

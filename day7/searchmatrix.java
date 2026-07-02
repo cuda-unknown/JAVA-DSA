@@ -24,6 +24,6 @@ public class searchmatrix {
         int key=sc.nextInt();
 
         System.out.println(searchingMatrix(arr, key));
-
+        sc.close();
     }
 }

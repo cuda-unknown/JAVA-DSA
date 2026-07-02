@@ -15,15 +15,15 @@ public class Array {
         // arr[0] = 56;
         // arr[1] = 66;
 
-        // int arr3[]=new int[5];
-        // Scanner sc=new Scanner(System.in);
-        // System.out.println("Enter Array:");
-        // for(int i=0;i<arr3.length;i++){
-        // arr3[i]=sc.nextInt();
-        // }
-        // for(int i=0;i<arr3.length;i++){
-        // System.out.print(arr3[i]);
-        // }
+        int arr3[]=new int[5];
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Array:");
+        for(int i=0;i<arr3.length;i++){
+        arr3[i]=sc.nextInt();
+        }
+        for(int i=0;i<arr3.length;i++){
+        System.out.print(arr3[i]);
+        }
 
         // System.out.println();
 
@@ -42,6 +42,6 @@ public class Array {
 
 
 
-        // sc.close();
+        sc.close();
     }
 }

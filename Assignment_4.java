@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Assignment_4 {
@@ -62,26 +61,36 @@ public class Assignment_4 {
 
     public static int removeDuplicate(int arr[]) {
         int j = 0;
-        for (int i = 1; i < arr.length ; i++) {
-            if (arr[i] != arr[j]){
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] != arr[j]) {
                 j++;
-                arr[j]=arr[i];
+                arr[j] = arr[i];
             }
         }
-        return j+1;
+        return j + 1;
     }
 
     public static void sumTarget(int[] arr, int target) {
-        ArrayList<Integer> result=new ArrayList<Integer>();
-        for(int i=0;i<arr.length-1;i++){
-            for(int j=i+1;i<arr.length-1;j++){
-                if(arr[i]+arr[j]==target) result.add(arr[i],arr[j]);
-            }
+        int s = 0;
+        int e = arr.length - 1;
+        System.out.print("Elements in array that give us sum 9 are : ");
+        while (s < e) {
+            int sum = arr[s] + arr[e];
+            if (sum == target) {
+                System.out.print("[" + arr[s] + "," + arr[e] + "]");
+                s++;
+                e--;
+            } else if (sum < target)
+                s++;
+            else
+                e--;
         }
-        System.out.println(result);
+        System.out.println("Sum not found");
     }
 
     public static void reverseString() {
+        System.out.println();
+        System.out.println();
         String name = "hello";
         char ch[] = name.toCharArray();
         int s = 0;
@@ -94,7 +103,7 @@ public class Assignment_4 {
             e--;
         }
         String reversed = new String(ch);
-        System.out.println("Reverse of String is : "+reversed);
+        System.out.println("Reverse of String is : " + reversed);
     }
 
     public static boolean checkPalindrome() {
@@ -157,6 +166,7 @@ public class Assignment_4 {
     }
 
     public static void substringPrint() {
+        System.out.println("Substring using built in method : ");
         String name = "abc";
         for (int i = 0; i < name.length(); i++) {
             for (int j = i + 1; j <= name.length(); j++) {
@@ -170,7 +180,7 @@ public class Assignment_4 {
         System.out.println("Substring without built in method : ");
         for (int i = 0; i < name.length(); i++) {
             String result = "";
-            for (int j = i ; j < name.length(); j++) {
+            for (int j = i; j < name.length(); j++) {
                 result += name.charAt(j);
                 System.out.println(result);
             }
@@ -187,9 +197,8 @@ public class Assignment_4 {
 
         sumAndAverage();
 
-    
-        int arr1[]={1,1,2,2,3,4,4};
-        int size=removeDuplicate(arr1);
+        int arr1[] = { 1, 1, 2, 2, 3, 4, 4 };
+        int size = removeDuplicate(arr1);
         System.out.println("Array after Removing Duplicate");
         for (int i = 0; i < size; i++) {
             System.out.print(arr1[i]);
@@ -202,11 +211,11 @@ public class Assignment_4 {
 
         reverseString();
 
-        System.out.println(checkPalindrome());
+        System.out.println("Checking if String is palindrome : " + checkPalindrome());
 
         countNumberOfVowelsConsonentsDigitsSpaces();
 
-        checkAnagram();
+        System.out.println("Checking if String is Anagram : " + checkAnagram());
 
         substringPrint();
 

@@ -24,6 +24,7 @@ public class DistanceFind {
         Scanner sc=new Scanner(System.in);
         String name=sc.next();
         distance(name);
+        sc.close();
     }
 }
    
