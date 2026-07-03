@@ -1,6 +1,8 @@
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 class employee {
     String name;
@@ -102,6 +104,29 @@ public class test {
         if (v == 0)
             return 0;
         return v + sumUsingRecursion(v - 1);
+    }
+
+    public static void moveZeroes() {
+        int arr7[] = { 0, 0, 0, 0, 8, 67, 88, 45 };
+        int endo = arr7.length - 1;
+        int sta = 0;
+
+        while (sta < endo) {
+            if (arr7[sta] == 0) {
+                int temp = arr7[sta];
+                arr7[sta] = arr7[endo];
+                arr7[endo] = temp;
+                sta++;
+                endo--;
+            } else {
+                sta++;
+                endo--;
+            }
+        }
+        for (int i = 0; i < arr7.length; i++) {
+            System.out.print(arr7[i] + " ");
+        }
+
     }
 
     public static void main(String[] args) {
@@ -207,7 +232,7 @@ public class test {
         int arr1[] = { 0, 1, 2, 34, 56, 67, 78, 88 };
         int s = 0;
         int tg = 56;
-        int e = arr1.length-1;
+        int e = arr1.length - 1;
         while (s <= 0) {
             int mid = (s + e) / 2;
             if (arr1[mid] == tg) {
@@ -273,8 +298,7 @@ public class test {
         int v = 6;
         System.out.println("sum is : " + sumUsingRecursion(v));
 
-
-        //pairs
+        // pairs
         System.out.println();
         int q[] = { 2, 7, 11, 12, 14 };
         int tar = 13;
@@ -285,13 +309,30 @@ public class test {
                 System.out.println("(" + q[start] + "," + q[end] + ")");
                 start++;
                 end--;
-            }
-            else if(q[start]+q[end]<tar) start++;
-            else end--;
+            } else if (q[start] + q[end] < tar)
+                start++;
+            else
+                end--;
 
         }
 
-        //10 12 18
+        moveZeroes();
+
+        System.out.println();
+        ArrayList<Integer> arrl = new ArrayList<Integer>();
+        arrl.add(90);
+        arrl.add(2);
+        arrl.add(1);
+        arrl.add(0);
+        arrl.add(89);
+        arrl.add(77);
+        Collections.sort(arrl);
+
+        System.out.println(arrl);
+
+        Collections.sort(arrl, Collections.reverseOrder());
+        System.out.println(arrl);
+        // 10
 
     }
 }
