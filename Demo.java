@@ -1,8 +1,11 @@
 
 class Demo {
-    public static int recursionSum(int digit){
-        if(digit==1) return 1;
-        return digit+recursionSum(digit-1);
+    public static int recur(int num){
+        int rev=0;
+        if(num==0) return rev;
+       
+        rev=rev*10+(num%10);
+        return recur(num/10);
     }
     public static void main(String[] args) {
 
@@ -23,7 +26,7 @@ class Demo {
         //     System.out.println(o);
         // }
 
-        int d=5;
-        System.out.println(recursionSum(d)+" ");
+        int num=123;
+        System.out.println(recur(num)+" ");
     }
 }
