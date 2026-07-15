@@ -54,8 +54,8 @@ public class test_2 {
         l1.add(10);
         l1.add(30);
         l1.add(10);
-        l1.removeIf(num -> num == 10);
-        System.out.println("Removing 10 from List : " + l1);
+        l1.removeIf(n -> n==10);
+        System.out.println("Removing all occurences of 10 From the list "+l1);
 
         // 7
         System.out.println();
