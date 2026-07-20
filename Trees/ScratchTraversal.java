@@ -21,6 +21,7 @@ public class ScratchTraversal {
         preorder(root.right);
     }
 
+    
     public static void inorder(Node root){
         if(root==null) return ;
         inorder(root.left);
