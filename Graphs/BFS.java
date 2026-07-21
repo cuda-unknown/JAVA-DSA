@@ -25,6 +25,7 @@ public class BFS {
             }
         }
     }
+    
     public static void main(String[] args) {
          int vertices = 4;
         ArrayList<ArrayList<Integer>> graph = new ArrayList<>();

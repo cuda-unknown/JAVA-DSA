@@ -368,5 +368,7 @@ public class test_2 {
             System.out.println("No duplicate element found.");
         }
 
+        //Missing Q10 and 18 
+
     }
 }
