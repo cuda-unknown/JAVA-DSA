@@ -1,35 +1,36 @@
 package Graphs;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class BFS {
 
-    public static void bfsTraversal(ArrayList<ArrayList<Integer>> graph , int start ) {
+    public static void bfsTraversal(ArrayList<ArrayList<Integer>> graph, int start) {
         boolean visited[] = new boolean[graph.size()];
         Queue<Integer> queue = new LinkedList<>();
 
         visited[start] = true;
         queue.add(start);
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             int ele = queue.poll();
             System.out.print(ele + " ");
 
-            //for neighbours
-            for(int i : graph.get(ele)) {
-                if(!visited[i]) {
+            // for neighbours
+            for (int i : graph.get(ele)) {
+                if (!visited[i]) {
                     visited[i] = true;
                     queue.add(i);
                 }
             }
         }
     }
-    
+
     public static void main(String[] args) {
-         int vertices = 4;
+        int vertices = 4;
         ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
-        for(int i = 0 ; i < vertices ; i++) {
+        for (int i = 0; i < vertices; i++) {
             graph.add(new ArrayList<>());
         }
 

@@ -1,12 +1,14 @@
 
 class Demo {
-    public static int recur(int num){
-        int rev=0;
-        if(num==0) return rev;
-       
-        rev=rev*10+(num%10);
-        return recur(num/10);
+    public static int recur(int num) {
+        int rev = 0;
+        if (num == 0)
+            return rev;
+
+        rev = rev * 10 + (num % 10);
+        return recur(num / 10);
     }
+
     public static void main(String[] args) {
 
         // System.out.println("Hi There");
@@ -19,14 +21,14 @@ class Demo {
         // int u = 10, y = 99, o = 188;
         // // System.out.println(u+y);
         // if (u > y && u > o) {
-        //     System.out.println(u);
+        // System.out.println(u);
         // } else if (y > u && y > o) {
-        //     System.out.println(y);
+        // System.out.println(y);
         // } else {
-        //     System.out.println(o);
+        // System.out.println(o);
         // }
 
-        int num=123;
-        System.out.println(recur(num)+" ");
+        int num = 123;
+        System.out.println(recur(num) + " ");
     }
 }
