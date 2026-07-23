@@ -21,7 +21,7 @@ public class DFS {
 
                 for(int i=list.size()-1;i>=0;i--){
                     int j=list.get(i);
-                    if(!visited[i]) {
+                    if(!visited[j]) {
                         s.push(j);
                     }
                 }
